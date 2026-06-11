@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const API_URL = const API_URL = 'https://upi-fraud-api-o7or.onrender.com';
+const API_URL = 'https://upi-fraud-api-o7or.onrender.com';
 
 function App() {
   const [features, setFeatures] = useState('');
