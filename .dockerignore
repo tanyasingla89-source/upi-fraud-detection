@@ -1,0 +1,12 @@
+frontend/
+notebooks/
+.git/
+.DS_Store
+__pycache__/
+*.pyc
+*.ipynb
+*.ipynb_checkpoints
+.env
+venv/
+requirements.txt
+complete_beginner_guide.html

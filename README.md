@@ -25,5 +25,23 @@ Python, Scikit-learn, XGBoost, SHAP, FastAPI, React, Render, Vercel
 - React dashboard
 - Fully deployed
 
+## Run with Docker
+
+```bash
+# Build the image
+docker build -t upi-fraud-api .
+
+# Run locally (API available at http://localhost:8000)
+docker run -p 8000:8000 upi-fraud-api
+
+# Test health endpoint
+curl http://localhost:8000/
+
+# Test predict endpoint (31 features: V1-V28, hour, is_night, Amount_scaled)
+curl -X POST http://localhost:8000/predict \
+  -H "Content-Type: application/json" \
+  -d '{"features": [-1.36,-0.07,2.54,1.38,-0.34,0.46,0.24,0.10,0.36,0.09,-0.55,-0.62,-0.99,-0.31,1.47,-0.47,0.21,0.03,0.40,0.25,-0.02,0.28,-0.11,0.07,0.13,-0.19,0.13,0.0,14,0,0.24]}'
+```
+
 ## Author
 Tanya Singla — https://github.com/tanyasingla89-source
